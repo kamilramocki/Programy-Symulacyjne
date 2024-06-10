@@ -24,18 +24,20 @@ def generate_processes(num_sequences=100, num_processes=100):
     all_sequences = []
     for _ in range(num_sequences):
         processes = []
-        base_burst = 1
+        base_burst = 501
+        base_arrival = 1
         for i in range(num_processes):
             #if i % 5 == 0 and i != 0:
-            base_burst += 5
+            base_burst -= 5
+            base_arrival += 1
             processes.append({
                 'id': i,
-                'arrival': random.randint(0, 100),
+                'arrival': base_arrival,
                 'burst': base_burst
             })
         all_sequences.append(processes)
 
-    with open('test.json', 'w') as f:
+    with open('one_array_desc.json', 'w') as f:
         json.dump(all_sequences, f, indent=4)
 
 

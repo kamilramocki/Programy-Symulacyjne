@@ -3,6 +3,7 @@ from algorithms.lru import LRUCache
 from algorithms.lfu import LFUCache
 from algorithms.mfu import MFUCache
 
+
 def load_test_sequences(filename: str):
     """
     Funkcja wczytuje ciągi odwołań stron z pliku JSON.
@@ -15,6 +16,7 @@ def load_test_sequences(filename: str):
     """
     with open(filename, 'r') as f:
         return json.load(f)
+
 
 def test_algorithm(algorithm_class, R_values, sequences):
     """
@@ -40,9 +42,11 @@ def test_algorithm(algorithm_class, R_values, sequences):
 
     return results
 
+
 if __name__ == "__main__":
     filename = 'processes.json'
-    R_values = [3, 5, 7]
+
+    R_values = [1, 2, 3, 4, 6, 7, 8, 9, 10, 12, 14, 16, 18, 20, 25, 30, 35, 40, 45, 50]
 
     test_sequences = load_test_sequences(filename)
 

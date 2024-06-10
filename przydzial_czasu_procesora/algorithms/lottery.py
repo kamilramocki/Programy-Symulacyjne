@@ -51,6 +51,7 @@ def lottery(processes):
             turnaround_time += current_time - arrival_time
             lottery_winner['burst'] = 0  # Proces zostaje ukończony
             completed_processes += 1
+            print(waiting_time)
         else:
             current_time += 1
 

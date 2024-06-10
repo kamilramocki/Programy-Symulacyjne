@@ -40,7 +40,7 @@ def test_scheduling_algorithm(algorithm, processes_list):
 
 
 if __name__ == "__main__":
-    with open('descending_processes.json', 'r') as f:
+    with open('one_array_desc.json', 'r') as f:
         processes_list = json.load(f)
 
     # Testowanie wszystkich algorytmów
