@@ -31,7 +31,6 @@ def fcfs(processes):
         waiting_time += current_time - arrival_time
         current_time += burst_time
         turnaround_time += current_time - arrival_time
-
     average_waiting_time = waiting_time / n
     average_turnaround_time = turnaround_time / n
     average_response_time = response_time / n

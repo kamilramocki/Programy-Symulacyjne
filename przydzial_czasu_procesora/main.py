@@ -4,6 +4,7 @@ from algorithms.lcsf import lcsf
 from algorithms.sjf import sjf
 from algorithms.lottery import lottery
 
+
 def test_scheduling_algorithm(algorithm, processes_list):
     """
     Testuje zadany algorytm przydziału czasu procesora na podstawie listy procesów.
@@ -37,8 +38,9 @@ def test_scheduling_algorithm(algorithm, processes_list):
     else:
         return 0, 0, 0  # Zwróć wartości domyślne, jeśli nie wykonano żadnych obliczeń
 
+
 if __name__ == "__main__":
-    with open('processes.json', 'r') as f:
+    with open('descending_processes.json', 'r') as f:
         processes_list = json.load(f)
 
     # Testowanie wszystkich algorytmów
